@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Sailaja Morrennagari: AI/ML and MLOps engineer building RAG, agentic AI and production ML systems.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sailaja-morrennagari.github.io/">
+<meta property="og:title" content="Sailaja Morrennagari | AI/ML &amp; MLOps Engineer">
+<meta property="og:description" content="Portfolio: agentic RAG, LLMOps and production ML projects, plus Hugging Face open-source contributions.">
+<meta property="og:image" content="https://sailaja-morrennagari.github.io/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <title>Sailaja Morrennagari</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -295,13 +303,14 @@ footer a{color:var(--band-muted)}
         </article>
 
         <article class="card">
-          <div class="badges"><span class="badge gold">In progress</span><span class="badge">LLMOps</span></div>
+          <div class="badges"><span class="badge gold">Week 1 shipped</span><span class="badge">LLMOps</span></div>
           <h3>LLMOps Platform</h3>
-          <p>A self-hosted LLM gateway with health checks and Prometheus metrics for latency, tokens per second and request counts. Next: Helm on Kubernetes, autoscaling, eval-gated CI/CD and Grafana dashboards.</p>
+          <p>A containerized FastAPI gateway in front of a self-hosted Qwen2.5-3B model, with health and readiness probes and Prometheus metrics for latency, tokens per second and request counts. Benchmarked at <b>p50 2.5 s / p95 6.7 s</b> (20 requests, ~13 tokens/s); output length drives tail latency, and Docker adds no measurable overhead. Next: Helm on Kubernetes, autoscaling, eval-gated CI/CD and Grafana dashboards.</p>
           <div class="arch"><div class="arch-row">
             <div class="box">Client</div><span class="arrow">→</span><div class="box hl">FastAPI gateway<small>/v1/generate</small></div><span class="arrow">→</span><div class="box">Ollama<small>model server</small></div>
           </div></div>
           <div class="tools"><span>FastAPI</span><span>Ollama</span><span>Prometheus</span><span>Docker</span><span>Kubernetes</span></div>
+          <div class="links"><a href="https://github.com/Sailaja-ASB/llmops-platform" target="_blank" rel="noopener">View code →</a></div>
         </article>
 
         <article class="card">
@@ -398,7 +407,7 @@ footer a{color:var(--band-muted)}
     <div class="inner">
       <div class="sec-head"><span class="k">Education</span><h2>Degrees and certifications</h2></div>
       <div class="edu">
-        <div><span class="yr">2025</span><b>M.S. Computer Science (Machine Learning)</b><span class="muted">University of South Dakota</span></div>
+        <div><span class="yr">May 2025</span><b>M.S. Computer Science (Machine Learning)</b><span class="muted">University of South Dakota</span></div>
         <div><span class="yr">2021</span><b>Master of Computer Applications</b><span class="muted">Dr. Ambedkar Institute of Technology</span></div>
         <div><span class="yr">2018</span><b>B.Sc. Mathematics, Physics &amp; CS</b><span class="muted">Sri Venkateswara University</span></div>
       </div>
