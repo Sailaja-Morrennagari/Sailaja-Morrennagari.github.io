@@ -309,13 +309,13 @@ footer a{color:var(--band-muted)}
         </article>
 
         <article class="card">
-          <div class="badges"><span class="badge gold">Week 1 shipped</span><span class="badge">LLMOps</span></div>
+          <div class="badges"><span class="badge gold">Kubernetes</span><span class="badge">LLMOps</span></div>
           <h3>LLMOps Platform</h3>
-          <p>A containerized FastAPI gateway in front of a self-hosted Qwen2.5-3B model, with health and readiness probes and Prometheus metrics for latency, tokens per second and request counts. Benchmarked at <b>p50 2.5 s / p95 6.7 s</b> (20 requests, ~13 tokens/s); output length drives tail latency, and Docker adds no measurable overhead. Next: Helm on Kubernetes, autoscaling, eval-gated CI/CD and Grafana dashboards.</p>
+          <p>A production-style LLM platform on Kubernetes, with every design decision backed by measurements. A FastAPI gateway (API keys, rate limits, circuit breaker, streaming, load shedding, Prometheus metrics) fronts a self-hosted Qwen2.5-3B and a hybrid-retrieval RAG service. Load tests found a probe bug that restarted healthy pods: fixing it cut stress-test errors from <b>30% to 0%</b>. RAG answers carry gateway-verified citations, and a prompt change raised citation accuracy from <b>40/47 to 47/47</b>; layered guardrails let <b>0 of 12</b> red-team attacks through.</p>
           <div class="arch"><div class="arch-row">
-            <div class="box">Client</div><span class="arrow">→</span><div class="box hl">FastAPI gateway<small>/v1/generate</small></div><span class="arrow">→</span><div class="box">Ollama<small>model server</small></div>
+            <div class="box">Client</div><span class="arrow">→</span><div class="box hl">Gateway<small>guardrails · /v1/ask</small></div><span class="arrow">→</span><div class="box">RAG service<small>BM25 + dense</small></div><span class="arrow">→</span><div class="box">Ollama<small>Qwen2.5-3B</small></div>
           </div></div>
-          <div class="tools"><span>FastAPI</span><span>Ollama</span><span>Prometheus</span><span>Docker</span><span>Kubernetes</span></div>
+          <div class="tools"><span>Kubernetes</span><span>Helm</span><span>FastAPI</span><span>RAG</span><span>Guardrails</span><span>Prometheus</span><span>Locust</span></div>
           <div class="links"><a href="https://github.com/Sailaja-ASB/llmops-platform" target="_blank" rel="noopener">View code →</a><a href="https://medium.com/@morrennagarisailaja/llmops-platform-week-1-building-an-llm-gateway-with-fastapi-docker-and-prometheus-9e62974db1a3" target="_blank" rel="noopener">Read the write-up →</a></div>
         </article>
 
