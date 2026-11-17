@@ -288,7 +288,7 @@ footer a{color:var(--band-muted)}
           <div class="case">
             <div><span class="k">Problem</span><p>Cloud copilots send private documents off-device and often answer without showing where facts came from.</p></div>
             <div><span class="k">Approach</span><p>A fully local copilot on Ollama (Qwen3) with Researcher, Coder and Reviewer agents, deterministic guardrails and a bounded self-correction loop.</p></div>
-            <div><span class="k">Evaluation</span><p>Reproducible benchmarks compare Top-1 and Top-3 retrieval across semantic, BM25, hybrid and reranked setups, with failure analysis driving each iteration. Final setup: <b>Top-1 45/47 (95.7%)</b> and <b>Hit@3 46/47 (97.9%)</b> on a 47-question evaluation set.</p></div>
+            <div><span class="k">Evaluation</span><p>Reproducible benchmarks compare Top-1 and Top-3 retrieval across semantic, BM25, hybrid and reranked setups, with failure analysis driving each iteration. On a 47-question benchmark, dense and BM25 each reached <b>91.5% Top-1</b> but failed on different questions; hybrid fusion (RRF) reached <b>100% (47/47)</b>, and a cross-encoder reranker added ~50 ms/query with no further gain.</p></div>
           </div>
           <div class="arch" aria-label="Copilot architecture">
             <div class="arch-row">
